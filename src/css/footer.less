@@ -1,0 +1,151 @@
+﻿/*尾部*/
+.footer {
+  margin-top: 20px;
+  width: 100%;
+
+  .bottom-content {
+    width: 100%;
+    background: url(../image/footerbg.jpg) no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+
+    .bottom-content-box {
+      width: 1200px;
+      margin: 0 auto;
+      margin-top: 50px;
+
+      ul {
+        li {
+          a {
+            &:hover {
+              color: #ffea08;
+            }
+          }
+        }
+      }
+
+      .footermain {
+        width: 1200px;
+        height: 152px;
+        margin: 0 auto;
+        margin-left: 40px;
+
+        .footerul {
+          width: 25%;
+          height: 152px;
+          float: left;
+          color: #fff;
+
+          .footerdt {
+            width: 300px;
+            height: 25px;
+            font-size: 14px;
+            margin-bottom: 24px;
+
+
+            .footerline {
+              width: 30px;
+              height: 1px;
+              background: #fff;
+              margin-top: 4px;
+            }
+
+          }
+
+          .footerdd {
+            width: 300px;
+            height: 104px;
+            font-size: 12px;
+
+            li {
+              width: 80px;
+              height: 17px;
+              line-height: 17px;
+              margin-bottom: 12px;
+
+              a {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+
+      .footerdown {
+        width: 1200px;
+        height: 20px;
+        margin: 50px auto 0;
+
+
+        ul {
+          .notitem {
+            &:before {
+              display: none;
+            }
+          }
+
+          li {
+            float: left;
+            font-size: 12px;
+
+            a {
+              color: #fff;
+            }
+
+            &:before {
+              content: "|";
+              margin: 0 28px;
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      .footerdownline {
+        width: 1200px;
+        height: 20px;
+        margin: 20px auto 0;
+        font-size: 12px;
+        color: #fff;
+        display: flex;
+        line-height: 20px;
+
+        &:before {
+          content: "";
+          flex: 1;
+          border-top: 1px solid #fff;
+          margin-top: 10px;
+        }
+
+        &:after {
+          content: "";
+          flex: 1;
+          border-top: 1px solid #fff;
+          margin-top: 10px;
+        }
+
+        span {
+          padding: 0 10px;
+        }
+      }
+
+      .footerfloor {
+        width: 1200px;
+        height: 54px;
+        margin: 16px auto 0;
+        text-align: center;
+        color: #fff;
+
+        span {
+          font-size: 12px;
+        }
+
+        b {
+          font-weight: normal;
+          font-size: 12px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+/* 侧边栏 */
+#sidebar {
+  width: 30px;
+  height: 100%;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  z-index: 99999999;
+  background-color: #202020;
+}
+#sidebar ul li {
+  padding-top: 5px;
+}
+#sidebar ul li:hover {
+  background-color: red;
+}
+#sidebar ul li:last-child {
+  margin-top: 150px;
+}
+#sidebar ul li .bar_cart {
+  background-image: url("../image/index_sprite1.png");
+  background-position: -270px -135px;
+  width: 30px;
+  height: 20px;
+}
+#sidebar ul li .coupon {
+  background-image: url("../image/index_sprite1.png");
+  background-position: -270px -166px;
+  width: 30px;
+  height: 20px;
+}
+#sidebar ul li .wallet {
+  background-image: url("../image/index_sprite1.png");
+  background-position: -270px -224px;
+  width: 30px;
+  height: 20px;
+}
+#sidebar ul li .footmark {
+  background-image: url("../image/index_sprite1.png");
+  background-position: -270px -193px;
+  width: 30px;
+  height: 20px;
+}
+#sidebar ul li span {
+  display: inline-block;
+  width: 15px;
+  margin-left: 8px;
+  color: white;
+  font-size: 12px;
+}

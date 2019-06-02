@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body>
+
+    <!-- 顶部 -->
+    <div class="top">
+        <!-- 工具栏 -->
+        <div class="heder_nav">
+            <div class="heder_nav_wrap">
+                <div class="header_nav_content">
+                    <a href="../index.html" class="nav_home item">
+                        <i></i>
+                        首页
+                    </a>
+                    <a href="./myCart.html" class="nav_order item">
+                        购物车
+                    </a>
+                    <div class="nav_we item">
+                        <a href="about.html"></a>关于我们
+                        <i></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- logo&搜索框 -->
+        <div class="header">
+            <!-- logo -->
+            <a href="" class="logo"><img src="../image/logo260x200.png" alt=""></a>
+            <div class="heder_category">
+                <i></i>目录
+                <!-- 二级菜单 -->
+                <div class="mulu" id="mulu">
+                    <div class="zhuti">
+                        <div class="zhuti-content">
+                            <div class="zhuti-content-title">主题市场</div>
+                            <ul>
+                                <li><a href="#">上衣</a></li>
+                                <li><a href="#">裙装</a></li>
+                                <li><a href="#">裤子</a></li>
+                                <li><a href="#">女鞋</a></li>
+                                <li><a href="#">美妆</a></li>
+                                <li><a href="#">包包</a></li>
+                                <li><a href="#">配饰</a></li>
+                                <li><a href="#">内衣</a></li>
+                                <li><a href="#">男友</a></li>
+                                <li><a href="#">母婴</a></li>
+                                <li><a href="#">家具</a></li>
+                                <li><a href="#">食品</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="zhuti">
+                        <div class="zhuti-content">
+                            <div class="zhuti-content-title">热门品牌</div>
+                            <ul>
+                                <li><a href="#">ZARA</a></li>
+                                <li><a href="#">CONVERSE</a></li>
+                                <li><a href="#">UNIQLO</a></li>
+                                <li><a href="#">NIKE</a></li>
+                                <li><a href="#">Charles&Keith</a></li>
+                                <li><a href="#">ICY</a></li>
+                                <li><a href="#">URBAN REVIVO</a></li>
+                                <li><a href="#">VANS</a></li>
+                                <li><a href="#">GUCCI</a></li>
+                                <li><a href="#">Bershka</a></li>
+                                <li><a href="#">CELINE</a></li>
+                                <li><a href="#">adidas</a></li>
+                                <li><a href="#">CHANEL</a></li>
+                                <li><a href="#">PUMA</a></li>
+                                <li><a href="#">Champion</a></li>
+                                <li><a href="#">BALENCIAGA</a></li>
+                                <li><a href="#">LOUIS VUITTON</a></li>
+                                <li><a href="#">Topshop</a></li>
+                                <li><a href="#">SICILY西西里</a></li>
+                                <li><a href="#">H&M</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 搜索框 -->
+            <div class="search">
+                <div class="search_content">
+                    <!-- 搜索框 -->
+                    <div class="search_inner_box">
+                        <div class="select_box">
+                            <span class="selected">搜商品</span>
+                        </div>
+                        <form action="" method="post" id="nav_from">
+                            <input type="text" class="ipt_txt">
+                            <input type="submit" class="ipt_btn" value>
+                        </form>
+                    </div>
+                </div>
+                <!-- 导航信息 -->
+                <div class="site_nav">
+                    <!-- 消息 -->
+                    <div class="header_message f1">
+
+                        <p class="nav_list_item xiaoxi"></p>
+                        消息
+                    </div>
+                    <!-- 收藏 -->
+                    <div class="header_icon_list f1">
+                        <p href="###" class="nav_list_item  collect"></a>
+                        </p>
+                        收藏
+                    </div>
+                    <!-- 购物车 -->
+                    <div class="header_icon_list f1">
+                        <p href="###" class="nav_list_item  shoppingCart"></a>
+                        </p>
+                        购物车
+                    </div>
+                    <!-- 下载App -->
+                    <div class="header_icon_list f1 code_box">
+                        <p href="###" class="nav_list_item  code"></a>
+                        </p>
+                        下载App
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 黑色导航栏 -->
+    <div class="page_top_nav">
+        <div class="page_top_nav_cont">
+            <ul class="page_top_nav_ul">
+                <li><a href="#">首页</a></li>
+                <li><a href="list.html">全部商品</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 商品内容 -->
+    <div class="page_main">
+        <!-- 商品价格区 -->
+        <div class="page_main_top">
+            <!-- 左边图片 -->
+            <div class="page_main_top_left f1">
+                <div class="page_main_proshow" id="box">
+                    <div class="big_img" id="big_img">
+                        <img src="../image/page/img1.jpg" id="big" />
+                    </div>
+                </div>
+            </div>
+            <!-- 右边价钱 -->
+            <div class="page_main_right">
+                <h1 class="pro_title">
+                    <span id="proname">2018冬季纯色毛衣男士韩版高领毛衣加绒加厚保暖针织衫个性线衣打底衫外套潮</span>
+                </h1>
+                <div class="pro_price">
+                    <dl class="jiage">
+                        <dt class="jiage_dt">价格：</dt>
+                        <dd class="jiage_dd">
+                            <span class="jiage_s" id="oldprice">¥125.72~¥154.29</span>
+                        </dd>
+                    </dl>
+                    <dl class="cuxiaojia">
+                        <dt class="cuxiao_dt">促销价：</dt>
+                        <dd class="cuxiao_dd">
+                            <span class="cuxiao_s" id="newprice">¥88.00~¥108.00</span>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 客服 -->
+                <div class="pro_kefu">
+                    <dl class="jiage">
+                        <dt class="jiage_dt">客服</dt>
+                        <dd class="jiage_dd"><span class="pro_kefu_span"></span></dd>
+                    </dl>
+                </div>
+                <!-- 颜色 -->
+                <div class="pro_color">
+                    <dl class="jiage">
+                        <dt class="jiage_dt">颜色</dt>
+                        <dd class="jiage_dd">
+                            <ol class="pro_color_ol" id="procolor">
+
+                                <li class="pro_color_on">
+                                    <img src="../image/page/img1.jpg" />
+                                </li>
+
+                            </ol>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 尺码 -->
+                <div class="pro_size" style="margin-top:60px">
+                    <dl class="jiage">
+                        <dt class="jiage_dt">尺码</dt>
+                        <dd class="jiage_dd">
+                            <ul class="pro_size_ul" id="pro-size">
+                                <li class="pro_size_on">M</li>
+                                <li>L</li>
+                                <li>XL</li>
+                                <li>XXL</li>
+                                <li>3XL</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 数量 -->
+                <div class="pro_count" style="margin-top:20px">
+                    <dl class="jiage">
+                        <dt class="jiage_dt">数量</dt>
+                        <dd class="jiage_dd">
+                            <div class="pro_num">
+                                <span class="num_reduce numjiage" mata="-1"></span>
+                                <input type="text" value="1" class="num_input" id="pronum" />
+                                <span class="num_add numjiage" mata="1"></span>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <!-- 立即抢购 -->
+                <div class="module_rushbuy clearfix">
+                    <a href="myCart.html" class="buy_btn">
+                        立即抢购
+                    </a>
+                </div>
+                <!-- 服务承诺 && 支付方式 -->
+                <div class="fuwuzhifu">
+                    <div style="color:#999;font-size: 12px;float: left;">服务承诺：</div>
+                    <ul class="chengnuo_list">
+                        <li class="chengnuo_list_item">
+                            <a href="#">
+                                <img src="../image/page/chengnuo-list1.png" />
+                                全国包邮
+                            </a>
+                        </li>
+                        <li class="chengnuo_list_item">
+                            <a href="#">
+                                <img src="../image/page/chengnuo-list2.png" />
+                                7天无理由退货
+                            </a>
+                        </li>
+                        <li class="chengnuo_list_item">
+                            <a href="#">
+                                <img src="../image/page/chengnuo-list3.png" />
+                                延误必赔
+                            </a>
+                        </li>
+                        <li class="chengnuo_list_item">
+                            <a href="#">
+                                <img src="../image/page/chengnuo-list4.png" />
+                                退货补运费
+                            </a>
+                        </li>
+                    </ul>
+                    <div style="color: #999;font-size: 12px;clear: both;float: left;">支付方式</div>
+                    <div class="zhifulist">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 商品详细信息 -->
+        <div class="page_main_content">
+            <!-- 左边男闺蜜潮装 -->
+            <div class="page_main_content_left">
+                <div class="dianpu">
+                    <!-- 标题 -->
+                    <div class="dianpu_title">
+                        <a href="#"><b>男闺蜜潮装</b></a>
+                    </div>
+                    <!-- 内容 -->
+                    <div class="dianpu_main">
+                        <ul>
+                            <li>
+                                <p class="text">描述</p>
+                                <p class="num_def">4.67</p>
+                            </li>
+                            <li>
+                                <p class="text">质量</p>
+                                <p class="num_def">4.65</p>
+                            </li>
+                            <li>
+                                <p class="text">服务</p>
+                                <p class="num_def">4.85</p>
+                            </li>
+                        </ul>
+                        <!-- 店铺 -->
+                        <div class="shop_btns">
+                            <a href="#" class="shop_shoucang">收藏店铺</a>
+                            <a href="#" class="shop_jinru shop-shoucang">进入店铺</a>
+                        </div>
+                        <!-- 站内搜索 -->
+                        <div class="shop_search">
+                            <form action="" class="shop-search-form">
+                                <input type="text" class="inptxt" />
+                                <input type="button" class="inpbtn" value="站内搜索" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品介绍信息 -->
+            <div class="page_main_content_xiangqing">
+                <!-- tab -->
+                <div class="xiangqing_tab">
+                    <ul class="xiangqing_tab_list" id="xiangqing_tab_list">
+                        <li class="xiangqing_tab_list_active"><a href="javascript:;">商品详情</a></li>
+                        <li><a href="javascript:;">累计评价</a></li>
+                        <li><a href="javascript:;">本店同类商品</a></li>
+                    </ul>
+                </div>
+                <!-- 内容 -->
+                <div class="xiangqing_content">
+                    <div>
+                        <div class="promiaoshu">
+                            <h1 class="xiangqing_content_h1">商品描述</h1>
+                        </div>
+                        <div class="promiaoshutext" id="miaoshu">
+                            2018冬季纯色毛衣男士韩版高领毛衣加绒加厚保暖针织衫个性线衣打底衫外套潮
+                        </div>
+                    </div>
+                    <div>
+                        <!-- 参数 -->
+                        <div class="promiaoshu">
+                            <h1 class="xiangqing_content_h1">产品参数</h1>
+                        </div>
+                        <!-- 参数内容 -->
+                        <div class="canshu_table">
+                            <!-- 参数表格 -->
+                            <table class="canshu_tab">
+                                <tr>
+                                    <td>图案: 纯色</td>
+                                    <td>颜色: 浅蓝色,加绒-焦糖色,黑色,粉色,豆绿色,焦糖色,白色,加绒-白色,加绒-黑色</td>
+                                    <td>袖型: 常规袖</td>
+                                </tr>
+                                <tr>
+                                    <td>衣门襟: 套头</td>
+                                    <td>尺码: XL,3XL,L,M,XXL</td>
+                                    <td>衣长: 常规款</td>
+                                </tr>
+                                <tr>
+                                    <td>版型: 宽松</td>
+                                    <td>季节: 冬季</td>
+                                    <td>材质: 粘胶,聚酯纤维</td>
+                                </tr>
+                                <tr>
+                                    <td>领型: 高领</td>
+                                    <td>袖长: 长袖</td>
+                                    <td>风格: 经典,中式,基本款,小清新</td>
+                                </tr>
+                                <tr>
+                                    <td>品牌: FGN/富贵鸟</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div>
+                        <!-- 穿着效果 -->
+                        <div class="promiaoshu">
+                            <h1 class="xiangqing_content_h1">穿着效果</h1>
+                        </div>
+                        <div id="czxg">
+                            <div class="pro_pic">
+                                <img src="../image/page/img1.jpg" id="big" />
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <!-- 尺码说明 -->
+                        <div class="promiaoshu">
+                            <h1 class="xiangqing_content_h1">尺码说明</h1>
+                        </div>
+                        <div class="pro_chimashuoming">
+                            <!-- 表格 -->
+                            <table class="size_table">
+                                <thead>
+                                    <tr>
+                                        <td>尺码</td>
+                                        <td>胸围</td>
+                                        <td>袖长</td>
+                                        <td>肩宽</td>
+                                        <td>衣长</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>M</td>
+                                        <td>98</td>
+                                        <td>61</td>
+                                        <td>41</td>
+                                        <td>62</td>
+                                    </tr>
+                                    <tr>
+                                        <td>L</td>
+                                        <td>100</td>
+                                        <td>62</td>
+                                        <td>42</td>
+                                        <td>63</td>
+                                    </tr>
+                                    <tr>
+                                        <td>XL</td>
+                                        <td>102</td>
+                                        <td>63</td>
+                                        <td>43</td>
+                                        <td>64</td>
+                                    </tr>
+                                    <tr>
+                                        <td>XXL</td>
+                                        <td>106</td>
+                                        <td>64</td>
+                                        <td>44</td>
+                                        <td>65</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3XL</td>
+                                        <td>110</td>
+                                        <td>65</td>
+                                        <td>45</td>
+                                        <td>66</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="tixing">
+                                ※ 以上尺寸为实物人工测量，因测量当时不同会有1-2cm误差，相关数据仅作参考，以收到实物为准。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 扩展 -->
+            <div class="kuozhan">
+                <div class="kuozhan_top">
+                    <div class="kuozhan_top_togger">
+                        手机扫码下单
+                    </div>
+                </div>
+                <!-- 扩展主体 -->
+                <div class="kuozhan_zhuti">
+                    <ul class="kuozhan_zhuti_ul" id="kuozhan_zhuti_ul">
+                        <li class="kuozhan_selected"><a href="javascript:;">商品描述</a></li>
+                        <li><a href="javascript:;">产品参数</a></li>
+                        <li><a href="javascript:;">穿着效果</a></li>
+                        <li><a href="javascript:;">尺码说明</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <div class="bottom-content">
+            <!--内容区域-->
+            <div class="bottom-content-box">
+                <!--底部中间内容-->
+                <div class="footermain">
+                    <div class="footerul">
+                        <div class="footerdt">
+                            新手帮助
+                            <p class="footerline"></p>
+                        </div>
+                        <ul class="footerdd">
+                            <li><a href="#">常见问题</a></li>
+                            <li><a href="#">自助服务</a></li>
+                            <li><a href="#">联系客服</a></li>
+                            <li><a href="#">意见反馈</a></li>
+                        </ul>
+                    </div>
+                    <div class="footerul">
+                        <div class="footerdt">
+                            权益保障
+                            <p class="footerline"></p>
+                        </div>
+                        <ul class="footerdd">
+                            <li>全国包邮</li>
+                            <li>7天无理由退货</li>
+                            <li>退货运费补贴</li>
+                            <li>限时发货</li>
+                        </ul>
+                    </div>
+                    <div class="footerul">
+                        <div class="footerdt">
+                            支付方式
+                            <p class="footerline"></p>
+                        </div>
+                        <ul class="footerdd">
+                            <li>微信支付</li>
+                            <li>支付宝支付</li>
+                            <li>白富美支付</li>
+                        </ul>
+                    </div>
+                    <div class="footerul">
+                        <div class="footerdt">
+                            移动客户端下载
+                            <p class="footerline"></p>
+                        </div>
+                        <ul class="footerdd">
+                            <li>
+                                <a href="#">MaiGo商城</a>
+                            </li>
+                            <li>
+                                <a href="#">美丽说</a>
+                            </li>
+                            <li>
+                                <a href="#">uni引力</a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 关于我们 -->
+                <div class="footerdown">
+                    <ul>
+                        <li class="notitem"><a href="#">关于我们</a></li>
+                        <li><a href="#">招聘信息</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">商家入驻</a></li>
+                        <li><a href="#">商家后台</a></li>
+                        <li><a href="#">商学院</a></li>
+                        <li><a href="#">商家社区</a></li>
+                        <li><a href="#">规则中心</a></li>
+                        <li><a href="#">规则众议院</a></li>
+                        <li><a href="#">有害信息举报</a></li>
+                        <li><a href="#">用户隐私保护</a></li>
+                    </ul>
+                </div>
+                <!-- 公司线 -->
+                <div class="footerdownline">
+                    <span>©2019 MeiJun.com 杭州MeiJun网络有限公司</span>
+                </div>
+                <!-- 版权 -->
+                <div class="footerfloor">
+                    <p><span>营业执照：913301265526808764</span><b>|</b><span>网络文化经营许可证：浙网文（2016）0349-219号</span><b>|</b><span>增值电信业务经营许可证：浙B2-20110349</span><b>|</b><span>安全责任书</span><b>|</b><span>浙公网安备
+                            33020602002329号</span><b>|</b></p>
+                    <p><span>互联网药品信息服务资格证书编号：（浙)-经营性-2018-0002</span><b>|</b><span>浙网食A33010003</span><b>|</b><span>出版物网络交易平台服务经营备案证</span><b>|</b><span>（浙）网械平台备字[2018]第00006号</span><b>|</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="js/jquery.js"></script>
+<script src="js/page.js"></script>

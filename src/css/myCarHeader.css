@@ -1,0 +1,120 @@
+.top {
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+  top: 0;
+  /* 工具栏 */
+}
+.top .heder_nav {
+  height: 33px;
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
+}
+.top .heder_nav .heder_nav_wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+.top .heder_nav .heder_nav_wrap .header_nav_content {
+  float: right;
+  line-height: 30px;
+  line-height: 33px;
+}
+.top .heder_nav .heder_nav_wrap .header_nav_content .item {
+  display: inline-block;
+  color: #999;
+}
+.top .heder_nav .heder_nav_wrap .header_nav_content .item:not(:first-child):before {
+  content: "|";
+  margin: 0 20px;
+  font-weight: 300;
+}
+.top .header {
+  width: 1200px;
+  margin: 0 auto;
+  height: 100px;
+  background: #fff;
+}
+.top .header .logo {
+  float: left;
+  width: 130px;
+  height: 100px;
+}
+.top .header .logo img {
+  height: 100%;
+}
+.top .header .heder_category {
+  float: left;
+  font-size: 15px;
+  line-height: 100px;
+  margin-left: 30px;
+  color: #333;
+  position: relative;
+}
+.top .header .heder_category i {
+  display: inline-block;
+  background: url("../image/category36x24.png") no-repeat;
+  width: 18px;
+  height: 12px;
+  background-size: cover;
+  margin-right: 2px;
+}
+.top .header #progress {
+  float: right;
+  height: 75px;
+  width: 500px;
+}
+.top .header #progress p {
+  display: inline-block;
+  font-size: 12px;
+  color: #ff4466;
+}
+.top .header #progress #progress_line {
+  position: relative;
+  background-image: url("../image/cart/cart_line.png");
+  background-position: -134px 0px;
+  background-repeat: repeat-x;
+  width: 103px;
+  height: 30px;
+  margin-top: 20px;
+  z-index: 10;
+}
+.top .header #progress #progress_line .pro1 {
+  margin-left: 8px;
+  color: white;
+  font-style: normal;
+}
+.top .header #progress #progress_line #progress_line2 {
+  background-position: -105px 0px;
+  background-image: url("../image/cart/pro.png");
+  width: 388px;
+  height: 30px;
+  background-repeat: repeat-x;
+  margin-top: -18.5px;
+  margin-left: 103px;
+  position: relative;
+}
+.top .header #progress #progress_line #progress_line2 .pro2 {
+  font-style: normal;
+  margin-left: 60px;
+  color: white;
+}
+.top .header #progress #progress_line #progress_line2 .pro3 {
+  font-style: normal;
+  margin-left: 146px;
+  color: white;
+}
+.top .header #progress #progress_line #progress_line2 .pro4 {
+  font-style: normal;
+  margin-left: 146px;
+  color: white;
+}
+.top .header #progress .p2 {
+  margin-left: 100px;
+}
+.top .header #progress .p3 {
+  margin-left: 120px;
+}
+.top .header #progress .p4 {
+  margin-left: 120px;
+}

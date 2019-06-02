@@ -1,0 +1,297 @@
+﻿.top {
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+  top: 0;
+
+  /* 工具栏 */
+  .heder_nav {
+    height: 33px;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+
+    .heder_nav_wrap {
+      width: 1200px;
+      margin: 0 auto;
+
+      .header_nav_content {
+        float: right;
+        line-height: 30px;
+        line-height: 33px;
+
+        .item {
+          display: inline-block;
+          color: #999;
+
+          &:not(:first-child):before {
+            content: "|";
+            margin: 0 20px;
+            font-weight: 300;
+          }
+        }
+
+        .nav_home {
+          i {
+            background-image: url("../image/nav_home_20x20.png");
+          }
+        }
+
+        .nav_home i,
+        .nav_market i {
+          width: 10px;
+          height: 12px;
+          background-repeat: no-repeat;
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 3px;
+          background-size: contain;
+        }
+
+        .nav_market {
+          i {
+            background-image: url("../image/shangcheng_20x20.png");
+          }
+        }
+
+        .nav_we {
+          i {
+            display: inline-block;
+            margin-left: 4px;
+            width: 6px;
+            height: 6px;
+            background: url("../image/nav_we_16x10.png") no-repeat;
+            background-size: 100%;
+          }
+        }
+
+      }
+    }
+  }
+
+  // logo搜索框
+  .header {
+    width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+    background: #fff;
+
+    .logo {
+      float: left;
+      width: 130px;
+      height: 100px;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .heder_category {
+
+
+
+
+      float: left;
+      font-size: 15px;
+      line-height: 100px;
+      margin-left: 30px;
+      color: #333;
+      position: relative;
+
+      i {
+        display: inline-block;
+        background: url("../image/category36x24.png") no-repeat;
+        width: 18px;
+        height: 12px;
+        background-size: cover;
+        margin-right: 2px;
+      }
+    }
+
+    //搜索框
+    .search {
+      float: left;
+      margin-left: 76px;
+
+      .search_content {
+        width: 552px;
+        height: 44px;
+        margin-top: 28px;
+        float: left;
+
+        .search_inner_box {
+          border-radius: 6px;
+          background: #f7f7f7;
+
+          /* 搜索框 */
+          #nav_from {
+            overflow: hidden;
+          }
+
+          .ipt_txt {
+            float: left;
+            width: 422px;
+            height: 44px;
+            line-height: 44px;
+            padding-left: 15px;
+            border: none;
+            color: #999;
+            font-size: 12px;
+            background: #f7f7f7;
+            outline: none;
+          }
+
+          .select_box {
+            position: relative;
+            float: left;
+            width: 60px;
+            text-align: center;
+
+            .selected {
+              display: block;
+              height: 44px;
+              line-height: 44px;
+              color: #666;
+              cursor: pointer;
+              background: url("../image/sanjiaoxin18x10.png") center right no-repeat #f7f7f7;
+              border-radius: 6px;
+              background-size: 9px 5px;
+            }
+          }
+
+          .ipt_btn {
+            float: right;
+            width: 55px;
+            height: 44px;
+            border-radius: 0 5px 5px 0;
+            border: 0;
+            cursor: pointer;
+            background: url("../image/ipt_btn116x96.png") no-repeat;
+            background-size: 100%;
+            outline: none;
+          }
+        }
+      }
+
+      .site_nav {
+        margin-top: 27px;
+        width: 342px;
+        margin-left: 20px;
+        float: left;
+
+        .nav_list_item {
+          width: 24px;
+          height: 24px;
+          background-repeat: no-repeat;
+          background-size: 100%;
+          margin-bottom: 2px;
+        }
+
+        .xiaoxi {
+          background-image: url("../image/xiaoxi_48x44.png");
+        }
+
+        .header_icon_list {
+          margin-left: 28px;
+          cursor: pointer;
+
+          .collect {
+            background-image: url("../image/collect_44x44.png");
+          }
+
+          .shoppingCart {
+            background-image: url("../image/cart_48x46.png");
+          }
+
+          .code_box {
+            margin-left: 18px;
+          }
+
+          .code {
+            background-image: url("../image/code_40x40.png");
+            margin-left: 10px;
+          }
+
+        }
+
+      }
+
+    }
+
+    &:hover {
+
+      /*二级目录显示隐藏*/
+      .mulu {
+        display: block;
+      }
+    }
+
+    .mulu {
+      width: 755px;
+      height: 242px;
+      position: absolute;
+      top: 80px;
+      left: -200px;
+      background: #fff;
+      border-top: 1px solid #f0f0f0;
+      z-index: 100;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+      border-radius: 2px;
+      font-size: 12px;
+      border: 1px solid #f7f7f7;
+      display: none;
+
+      &:before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: #fff;
+        position: absolute;
+        top: -5px;
+        left: 208px;
+        transform: rotate(45deg);
+        border-top: 1px solid #f1f1f1;
+        border-left: 1px solid #f1f1f1;
+      }
+
+      ul {
+        line-height: 24px;
+        margin-top: 8px;
+
+        li {
+          float: left;
+          margin-right: 30px;
+
+          a {
+            color: #666;
+
+            &:hover {
+              color: #ff4465;
+            }
+          }
+        }
+      }
+
+      .zhuti {
+        box-sizing: border-box;
+        width: 50%;
+        height: 100%;
+        float: left;
+        border-right: 1px solid #f1f1f1;
+        padding: 30px 0 30px 20px;
+
+        .zhuti-content-title {
+          height: 24px;
+          line-height: 24px;
+          font-size: 14px;
+        }
+      }
+
+    }
+  }
+}
+
+
+.banner_wrap {
+  width: 1190px;
+}
