@@ -15,7 +15,7 @@ const pngquant = require('imagemin-pngquant')
 
 var config={
     input:{
-        html:['./src/html/*.html'],
+        html:['./src/html/*.html','./src/*.html'],
         css: ['./src/css/*.css'],
         less:['src/css/*.less'],
         js:['./src/js/*.js','!./src/js/*.min.js'],

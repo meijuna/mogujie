@@ -1,55 +1,91 @@
+$(function () {
 
-$(function() {
+  $.ajax({
+    type: "get",
+    url: "./lib/getProductList.php",
+    dataType: "json",
+    success: function (response) {
+      var mabyLike = $('.mabyLike');
+      var product_list = $('.product_list');
+      var template = '';
+      var template2 = '';
+      response.forEach(function (elm, i) {
 
+        console.log(elm)
+        template = `
+              <li> 
+                  <a href="html/page.html?id=${elm.id}">
+                  
+                  <img class="lazy" data-original="${elm.pic}" alt="${elm.title}">
+                  <h6 hidden="hidden">找相似</h6>
+                  <p class="line_one">${elm.title}</p>
+                  <img class="mabyLike_icon" src="./image/search/mabyLike_little1.png"><br>
+                  <span>$${elm.nowPrice}</span>&nbsp;&nbsp;
+                  <del>$${elm.oldPrice}</del>
+                  <img src="./image/search/mabyLike_little3.png" class="start"><em>${elm.num}</em>
+                </a>
+              </li>
+                  `;
+        var template2 = `
+              <a href="html/page.html?id=${elm.id}">
+                  <div class="swiper_item fl">
+                    
+                          <div class="swiper_img_wrap ">
+                              <img class="lazy" data-original="${elm.pic}" alt="${elm.title}">
+                          </div>
 
-	var index=0;
+                          <p class="swiper_item_title">${elm.title}
+                          </p>
+                          <p class="swiper_item_price">
+                              <span>￥</span> ${elm.nowPrice}
+                          </p>
+                     
+                  </div>
+              </a>
+                  `;
+        mabyLike.append(template);
+        product_list.append(template2);
+      });
+      $("img.lazy").lazyload({
+        effect: "fadeIn",
+        threshold: 180
+      });
 
-	
-
-	//轮播图
-	//初始化图片 选项
-	
-	$(".banner_box_content ul li").eq(0).addClass('current');
-	$(".banner_box_content ol li").eq(0).addClass('circle_current');
-	// 图片显示
-	$(".mslide_banners ul li").eq(0).addClass('current');  
-	$(".mslide_banners  ol li").eq(0).addClass('circle_current');
-
-
-	setInterval(autoPlay,3000); //自动播放
-
-	function autoPlay(){
-		index++;   //>4
-		index=index > $(".banner_box_content ul li").length-1?0:index;
-        //透明度
-		$(".banner_box_content ul li").eq(index).addClass('current').siblings().removeClass('current');
-		$(".banner_box_content ol li").eq(index).addClass('circle_current').siblings().removeClass('circle_current');
-
-		$(".mslide_banners ul li").eq(index).addClass('current').siblings().removeClass('current');
-		$(".mslide_banners ol li").eq(index).addClass('circle_current').siblings().removeClass('circle_current');
     }
-	
-	//  搜索跳转
-	$('.ipt_btn').click(function(){
-		window.location.href="search.html"
-	});
+  });
+  var user_name = cookie.get('name');
+  if (user_name) {
+    $('.base_info').remove();
+    $.ajax({
+      type: "get",
+      url: "./lib/getUserInof.php",
+      data: {
+        user_name: user_name
+      },
+      dataType: "json",
+      success: function (response) {
+        console.log(response);
+        var template3 = `
 
-	
-	// 精选专题
+          <div class="base_info">
+              <a href="###" >
+                  <img src="${response.uer_head}" class="avatar">
+                  </a>
+              <div class="wecome">
+                  <span>您好！</span>
+                  <span class="name">${response.user_name},你好！欢迎你的到来~</span>
 
-	var lineMove_index=0;
-    setInterval(run,2000);
-	
+              </div>
+              <div class="privileged">
+                  <a href="./html/login.html"><span>会员中心</span></a>
+              </div>
 
-	function run(){
-		lineMove_index++;
-		lineMove_index=lineMove_index>3?0:lineMove_index;
-		lineMove_index=lineMove_index<0?3:lineMove_index;
-		$(".mslidle_banners").animate({left: -lineMove_index*230+"px"}, 500);
-		$(".mslide_banners").animate({left: -lineMove_index*960+"px"}, 500);
-	}
+          </div>
+         
+          `;
+        $('.user_info').prepend(template3);
+      }
+    });
+  }
 
 });
-
-	
-

@@ -63,21 +63,19 @@
   height: 100%;
   display: block;
 }
-.box-main .main .login_box .login-content .tishi {
+.box-main .main .login_box .login-content label.tishi {
   width: 312px;
-  height: 32px;
   margin-top: 14px;
   background: url(../image/login/tishibg.png) no-repeat 10px center #fff;
   box-sizing: border-box;
-  border: 1px solid #ffd797;
+  border: 1px solid #ff1877;
   display: none;
-}
-.box-main .main .login_box .login-content .tishi .tishicontent {
   height: 32px;
-  line-height: 32px;
-  margin-left: 40px;
-  font-size: 12px;
+  line-height: 29px;
+  font-size: 14px;
+  text-indent: 34px;
   color: #ff1877;
+  display: block;
 }
 .box-main .main .login_box .login-content .inputtx {
   width: 100%;

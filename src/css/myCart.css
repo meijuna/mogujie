@@ -101,6 +101,9 @@
   margin-left: 30px;
   padding: 5px;
 }
+.content .active {
+  color: #ff5977;
+}
 .content table {
   border-collapse: collapse;
   margin-left: 30px;
@@ -202,11 +205,10 @@
 }
 .content table tbody tr:nth-child(even) button#div {
   position: absolute;
-  left: 1105px;
+  left: 1119px;
 }
 .content table tbody tr:nth-child(even) button#plus {
   position: absolute;
-  left: 1199px;
 }
 .content table tbody tr:nth-child(even) input[type=text] {
   width: 60px;

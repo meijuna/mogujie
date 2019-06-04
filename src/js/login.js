@@ -1,143 +1,119 @@
-$(function(){
+$(function () {
 	// 登录&注册切换样式
-$(".tab-list").click(function () {
-	$(this).addClass("active").siblings().removeClass("active")
-})
-//单击登录/注册 显示对应模块
-$("#dl").click(function () {
-	$("#login-content").css("display", "block");
-	$("#register-content").css("display", "none")
-})
-$("#zc").click(function () {
-	$("#register-content").css("display", "block")
-	$("#login-content").css("display", "none");
-})
+	$(".tab-list").click(function () {
+		$(this).addClass("active").siblings().removeClass("active")
+	})
+	//单击登录/注册 显示对应模块
+	$("#dl").click(function () {
+		$("#login-content").css("display", "block");
+		$("#register-content").css("display", "none")
+	})
+	$("#zc").click(function () {
+		$("#register-content").css("display", "block")
+		$("#login-content").css("display", "none");
+	})
 
-// -------------------注册-----------------
 
-var flagUname = null;  //注册 验证用户名框
-$("#uname").blur(function () {
-	var reg = /^[a-z]\w+$/i;
-	var reg1 = /^\w+@\w+(\.\w+)+$/;
-	var reg2 = /^1[3578]\d{9}$/;
-	var str = $(this).val();
-	if (reg.test(str)) {
-		flagUname = true;
-		$("#t1").html("Yes").css("color", "#00ff00")
-	} else if (reg1.test(str)) {
-		flagUname = true;
-		$("#t1").html("Yes").css("color", "#00ff00")
-	} else if (reg2.test(str)) {
-		flagUname = true;
-		$("#t1").html("Yes").css("color", "#00ff00")
-	} else {
-		flagUname = false;
-		$("#t1").html("No").css("color", "#ff0000")
-	}
-})
+	$.extend($.validator.messages, {
+		required: "这是必填字段",
+		remote: "请修正此字段",
+		email: "请输入有效的电子邮件地址",
+		url: "请输入有效的网址",
+		date: "请输入有效的日期",
+		dateISO: "请输入有效的日期 (YYYY-MM-DD)",
+		number: "请输入有效的数字",
+		digits: "只能输入数字",
+		creditcard: "请输入有效的信用卡号码",
+		equalTo: "你的输入不相同",
+		extension: "请输入有效的后缀",
+		maxlength: $.validator.format("最多可以输入 {0} 个字符"),
+		minlength: $.validator.format("最少要输入 {0} 个字符"),
+		rangelength: $.validator.format("请输入长度在 {0} 到 {1} 之间的字符串"),
+		range: $.validator.format("请输入范围在 {0} 到 {1} 之间的数值"),
+		max: $.validator.format("请输入不大于 {0} 的数值"),
+		min: $.validator.format("请输入不小于 {0} 的数值")
+	});
 
-var flagPwd = null;  //验证密码框
-$("#upwd").blur(function () {
-	var regNum = /^\d+$/;
-	var regLetter = /^[a-z]+$/i; //忽略大小写
-	var regChar = /^[!@#$%^&*]+$/;
-	var _regNum = /\d+/;
-	var _regLetter = /[a-z]+/i;
-	var _regChar = /[!@#$%^&*]+/;
-	var str = $(this).val();
-	if (str.length < 6 || str.length > 18) { //不符合条件
-		$("#t2").html("密码要在6-18位").css("color", "#ff0000");
-		flagPwd = false;
-	} else if (regNum.test(str) || regLetter.test(str) || regChar.test(str)) {
-		$("#t2").html("弱").css("color", "#ff0000");
-		flagPwd = true;
-	} else if (_regNum.test(str) && _regLetter.test(str) && _regChar.test(str)) {
-		$("#t2").html("强").css("color", "#00ff00");
-		flagPwd = true;
-	} else {
-		$("#t2").html("中").css("color", "#FFEA08");
-		flagPwd = true;
-	}
-})
-function yzm() {
-	var str = "";//存储验证码
-	//取出6位
-	for (var i = 1; i <= 6; i++) {
-		var code = rand(48, 122);
-		if (code >= 58 && code <= 64 || code >= 91 && code <= 96) {
-			//不满足就重新抽
-			i--;
-		} else {
-			//满足 就将code转成字符
-			str += String.fromCharCode(code);
-		}
-	}
-	return str;
-}
 
-$("#yzm").html(yzm());  //注册 验证码码图片显示
-$("#rghuan").click(function () { //换一张
-	$("#yzm").html(yzm());
-})
+	$().ready(function () {
+		$("#myform").validate({
+			errorClass: 'tishi',
+			submitHandler: function (form) {
+				var user_name = $('#sname').val();
+				var user_pwd = $('#spwd').val();
+				var reg_name = $('#uname').val();
+				var reg_pwd = $('#upwd2').val()
+				$('#regbtn').on('click', function () {
 
-var flagYzm = null;
-$("#regyzm").blur(function () { //验证码框验证
-	if ($(this).val() == $("#yzm").html().toLowerCase()) {
-		flagYzm = true;
-	} else {
-		flagYzm = false;
-	}
-})
-//验证是否注册成功
-$("#regbtn").click(function () {  
-	if (flagUname && flagPwd && flagYzm) {
-		alert("注册成功");
-	} else {
-		alert("注册失败")
-	}
-})
+					$.ajax({
+						type: "get",
+						url: "../lib/isRegister.php",
+						data: {
+							user_name: reg_name,
+							user_pwd: reg_pwd
+						},
+						dataType: "json",
+						success: function (response) {
 
-// -------------------登录-----------------
+							alert(response.msg);
+							if (response.has === true) {
+								setCookieId(reg_name);
+								location.href = "../index1.html";
+							}
 
-$("#loginyzm").html(yzm());  //登录验证码
-$("#loginhuan").click(function () { //登录切换验证码
-	$("#loginyzm").html(yzm());
-})
-$("#sname").blur(function () {  //登录框验证
-	if ($(this).val() == "") {
-		$("#tishi").html("请输入用户名");
-		$("#tishidiv").css("display", "block")
-	} else {
-		$("#tishidiv").css("display", "none")
-	}
-})
-$("#spwd").blur(function () { //登录密码框验证
-	if ($(this).val() == "") {
-		$("#tishi").html("请输入密码");
-		$("#tishidiv").css("display", "block")
-	} else {
-		$("#tishidiv").css("display", "none")
-	}
-})
-//登录验证
-$("#loginbtn").click(function () {
-		var sname = $("#sname").val();
-		var spwd = $("#spwd").val();
-		var logininyzm = $("#logininyzm").val();
-		if (logininyzm == $("#loginyzm").html().toLowerCase()) {
-			if (sname.length > 0) {
-				if (spwd.length > 0) {
-					alert("登录成功")
-					location.href = "../html/login.html";
-				} else {
-					alert("密码错误")
+						}
+					});
+					return;
+				})
+
+				function setCookieId(name) {
+					cookie.set('name', name, 1);
 				}
-			} else {
-				alert("用户名有误")
-			}
-		} else {
-			alert("验证码错误")
-		}
-})
-});
+				$('#loginbtn').on('click', function () {
+					$.ajax({
+						type: "get",
+						url: "../lib/isLogin.php",
+						data: {
+							user_name: user_name,
+							user_pwd: user_pwd
+						},
+						dataType: "json",
+						success: function (response) {
+							alert(response.msg);
 
+							if (response.has) {
+								setCookieId(user_name);
+								location.href = "../index1.html";
+							}
+
+						}
+					});
+				})
+
+			},
+			rules: {
+				sname: {
+					required: true,
+					rangelength: [1, 10]
+				},
+				spwd: {
+					required: true,
+					rangelength: [6, 16]
+				},
+				uname: {
+					required: true,
+					rangelength: [6, 16]
+				},
+				upwd: {
+					required: true,
+					rangelength: [6, 16]
+				},
+				upwd2: {
+					required: true,
+					equalTo: "#upwd"
+				}
+			}
+		});
+	});
+
+});
